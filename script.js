@@ -36,35 +36,38 @@ function round(playerSelection, computerSelection) {
     }
 }
 
+
 function game() {
+    let playerScore = 0;
+    let computerScore = 0;
     for (let i=1; i<=5; i++) {
         let playerSelection = prompt("Rock, paper or scissors?");
         let computerSelection = getComputerChoice();
+        console.log(playerSelection);
         console.log(computerSelection);
         console.log(round(playerSelection.toLowerCase(), computerSelection));
+        let score = round(playerSelection.toLowerCase(), computerSelection);
+        console.log(score);
+        if (score === "You lose! Paper beats Rock") {
+            computerScore = computerScore + 1;
+        }
+        else if (score === "Tie") {
+            computerScore = computerScore + 1;
+            playerScore = playerScore + 1;
+        }
+        else if (score === "You win! Congrats!") {
+            playerScore = playerScore + 1;
+        }
+        console.log(playerScore);
+        console.log(computerScore);
+        
     }
-
-    // let playerSelection = prompt("Rock, paper or scissors?");
-    // let computerSelection = getComputerChoice();
-    // console.log(computerSelection);
-    // console.log(round(playerSelection.toLowerCase(), computerSelection));
-    // playerSelection = prompt("Rock, paper or scissors?");
-    // computerSelection = getComputerChoice();
-    // console.log(computerSelection);
-    // console.log(round(playerSelection.toLowerCase(), computerSelection));
-    // playerSelection = prompt("Rock, paper or scissors?");
-    // computerSelection = getComputerChoice();
-    // console.log(computerSelection);
-    // console.log(round(playerSelection.toLowerCase(), computerSelection));
-    // playerSelection = prompt("Rock, paper or scissors?");
-    // computerSelection = getComputerChoice();
-    // console.log(computerSelection);
-    // console.log(round(playerSelection.toLowerCase(), computerSelection));
-    // playerSelection = prompt("Rock, paper or scissors?");
-    // computerSelection = getComputerChoice();
-    // console.log(computerSelection);
-    // console.log(round(playerSelection.toLowerCase(), computerSelection));
-
+    if (playerScore > computerScore) {
+        return "Player win";
+    }
+    else {
+        return "Computer win";
+    }
 
     
 }
