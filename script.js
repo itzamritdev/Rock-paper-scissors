@@ -13,25 +13,31 @@ function getComputerChoice() {
 }
 // make a function that return a string based on the selection
 function round(playerSelection, computerSelection) {
-    if (playerSelection == "Rock" && computerSelection == "Paper") {
+    if (playerSelection === "Rock" && computerSelection === "Paper") {
         return "You lose! Paper beats Rock";
     }
-    else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+    else if (playerSelection === "Paper" && computerSelection === "Scissors") {
         return "You lose! Scissors beats Paper";
     }
-    else if (playerSelection == "Scissors" && computerSelection == "Rock") {
+    else if (playerSelection === "Scissors" && computerSelection === "Rock") {
         return "You lose! Rock beats scissors";
     }
-    else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
+    else if (playerSelection === "Scissors" && computerSelection === "Scissors") {
         return "Tie";
     }
-    else if (playerSelection == "Rock" && computerSelection == "Rock") {
+    else if (playerSelection === "Rock" && computerSelection === "Rock") {
         return "Tie";
     }
-    else if (playerSelection == "Paper" && computerSelection == "Paper") {
+    else if (playerSelection === "Paper" && computerSelection === "Paper") {
         return "Tie";
     }
     else {
         return "You win! Congrats!";
     }
 }
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playerSelection);
+console.log(computerSelection);
+console.log(round(playerSelection, computerSelection));
+
