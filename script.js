@@ -35,9 +35,40 @@ function round(playerSelection, computerSelection) {
         return "You win! Congrats!";
     }
 }
-const playerSelection = "Rock";
-const computerSelection = getComputerChoice();
-console.log(playerSelection);
-console.log(computerSelection);
-console.log(round(playerSelection.toLowerCase(), computerSelection));
+
+function game() {
+    let playerSelection = prompt("Rock, paper or scissors?");
+    let computerSelection = getComputerChoice();
+    console.log(computerSelection);
+    console.log(round(playerSelection.toLowerCase(), computerSelection));
+    playerSelection = prompt("Rock, paper or scissors?");
+    computerSelection = getComputerChoice();
+    console.log(computerSelection);
+    console.log(round(playerSelection.toLowerCase(), computerSelection));
+    playerSelection = prompt("Rock, paper or scissors?");
+    computerSelection = getComputerChoice();
+    console.log(computerSelection);
+    console.log(round(playerSelection.toLowerCase(), computerSelection));
+    playerSelection = prompt("Rock, paper or scissors?");
+    computerSelection = getComputerChoice();
+    console.log(computerSelection);
+    console.log(round(playerSelection.toLowerCase(), computerSelection));
+    playerSelection = prompt("Rock, paper or scissors?");
+    computerSelection = getComputerChoice();
+    console.log(computerSelection);
+    console.log(round(playerSelection.toLowerCase(), computerSelection));
+    
+
+    
+}
+
+console.log(game());
+
+
+
+// const playerSelection = "Rock";
+// const computerSelection = getComputerChoice();
+// console.log(playerSelection);
+// console.log(computerSelection);
+// console.log(round(playerSelection.toLowerCase(), computerSelection));
 
