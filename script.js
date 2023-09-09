@@ -22,6 +22,15 @@ function round(playerSelection, computerSelection) {
     else if (playerSelection == "Scissors" && computerSelection == "Rock") {
         return "You lose! Rock beats scissors";
     }
+    else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
+        return "Tie";
+    }
+    else if (playerSelection == "Rock" && computerSelection == "Rock") {
+        return "Tie";
+    }
+    else if (playerSelection == "Paper" && computerSelection == "Paper") {
+        return "Tie";
+    }
     else {
         return "You win! Congrats!";
     }
