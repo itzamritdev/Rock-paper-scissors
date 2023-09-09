@@ -2,42 +2,42 @@
 function getComputerChoice() {
     const random = Math.floor(Math.random() * 3) + 1;
     if (random === 1) {
-        return "Rock";
+        return "rock";
     }
     else if (random === 2) {
-        return "Paper";
+        return "paper";
     }
     else {
-        return "Scissors";
+        return "scissors";
     }
 }
 // make a function that return a string based on the selection
 function round(playerSelection, computerSelection) {
-    if (playerSelection === "Rock" && computerSelection === "Paper") {
+    if (playerSelection === "rock" && computerSelection === "paper") {
         return "You lose! Paper beats Rock";
     }
-    else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+    else if (playerSelection === "paper" && computerSelection === "scissors") {
         return "You lose! Scissors beats Paper";
     }
-    else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+    else if (playerSelection === "scissors" && computerSelection === "rock") {
         return "You lose! Rock beats scissors";
     }
-    else if (playerSelection === "Scissors" && computerSelection === "Scissors") {
+    else if (playerSelection === "scissors" && computerSelection === "scissors") {
         return "Tie";
     }
-    else if (playerSelection === "Rock" && computerSelection === "Rock") {
+    else if (playerSelection === "rock" && computerSelection === "rock") {
         return "Tie";
     }
-    else if (playerSelection === "Paper" && computerSelection === "Paper") {
+    else if (playerSelection === "paper" && computerSelection === "paper") {
         return "Tie";
     }
     else {
         return "You win! Congrats!";
     }
 }
-const playerSelection = "rock";
+const playerSelection = "Rock";
 const computerSelection = getComputerChoice();
 console.log(playerSelection);
 console.log(computerSelection);
-console.log(round(playerSelection, computerSelection));
+console.log(round(playerSelection.toLowerCase(), computerSelection));
 
