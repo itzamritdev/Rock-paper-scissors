@@ -12,7 +12,7 @@ function getComputerChoice() {
     }
 }
 // make a function that return a string based on the selection
-function round(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     if (playerSelection === "rock" && computerSelection === "paper") {
         return "You lose! Paper beats Rock";
     }
@@ -45,10 +45,10 @@ function game() {
         let computerSelection = getComputerChoice();
         console.log(playerSelection);
         console.log(computerSelection);
-        console.log(round(playerSelection.toLowerCase(), computerSelection));
-        let score = round(playerSelection.toLowerCase(), computerSelection);
+        console.log(playRound(playerSelection.toLowerCase(), computerSelection));
+        let score = playRound(playerSelection.toLowerCase(), computerSelection);
         console.log(score);
-        if (score === "You lose! Paper beats Rock") {
+        if (score === "You lose! Paper beats Rock" || score === "You lose! Scissors beats Paper" || score === "You lose! Rock beats scissors") {
             computerScore = computerScore + 1;
         }
         else if (score === "Tie") {
@@ -80,5 +80,5 @@ console.log(game());
 // const computerSelection = getComputerChoice();
 // console.log(playerSelection);
 // console.log(computerSelection);
-// console.log(round(playerSelection.toLowerCase(), computerSelection));
+// console.log(playRound(playerSelection.toLowerCase(), computerSelection));
 
